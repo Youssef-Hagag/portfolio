@@ -1,0 +1,56 @@
+{
+    "certificates": [
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Certificate One",
+        "description": "This is a description for certificate one.",
+        "link": "https://example.com/certificate1"
+      },
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Certificate Two",
+        "description": "This is a description for certificate two.",
+        "link": "https://example.com/certificate2"
+      },
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Certificate Three",
+        "description": "This is a description for certificate three.",
+        "link": "https://example.com/certificate3"
+      },
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Certificate Four",
+        "description": "This is a description for certificate four.",
+        "link": "https://example.com/certificate4"
+      }
+    ],
+
+    "projects": [
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Certificate One",
+        "description": "This is a description for certificate one.",
+        "link": "https://example.com/certificate1"
+      },
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Certificate Two",
+        "description": "This is a description for certificate two.",
+        "link": "https://example.com/certificate2"
+      },
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Certificate Three",
+        "description": "This is a description for certificate three.",
+        "link": "https://example.com/certificate3"
+      },
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Certificate Four",
+        "description": "This is a description for certificate four.",
+        "link": "https://example.com/certificate4"
+      }
+    ]
+  }
+  
