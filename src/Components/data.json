@@ -1,55 +1,43 @@
 {
+    "projects": [
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Twitter Clone",
+        "description": "This is a description for certificate one.",
+        "link": "https://github.com/CMP25-SWE-TEAM1/Frontend"
+      },
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "E-Commerce Website",
+        "description": "This is a description for certificate two.",
+        "link": "https://github.com/Youssef-Hagag/HardWhere"
+      },
+      {
+        "image": "/images/font_classifier.jpeg",
+        "title": "Search Engine",
+        "description": "This is a description for certificate three.",
+        "link": "https://github.com/Youssef-Hagag/Search-Engine"
+      }
+    ],
+
     "certificates": [
       {
         "image": "/images/font_classifier.jpeg",
         "title": "Certificate One",
         "description": "This is a description for certificate one.",
-        "link": "https://example.com/certificate1"
+        "link": "https://drive.google.com/file/d/199mNgUpmSeQhrH7R6E1C-5X45Lmceiwv/view?usp=sharing"
       },
       {
         "image": "/images/font_classifier.jpeg",
         "title": "Certificate Two",
         "description": "This is a description for certificate two.",
-        "link": "https://example.com/certificate2"
+        "link": "https://drive.google.com/file/d/1IixWFGDnjkQvYTrg7BOgJb5ZRENk_NSi/view?usp=sharing"
       },
       {
         "image": "/images/font_classifier.jpeg",
-        "title": "Certificate Three",
-        "description": "This is a description for certificate three.",
-        "link": "https://example.com/certificate3"
-      },
-      {
-        "image": "/images/font_classifier.jpeg",
-        "title": "Certificate Four",
-        "description": "This is a description for certificate four.",
-        "link": "https://example.com/certificate4"
-      }
-    ],
-
-    "projects": [
-      {
-        "image": "/images/font_classifier.jpeg",
-        "title": "Certificate One",
-        "description": "This is a description for certificate one.",
-        "link": "https://example.com/certificate1"
-      },
-      {
-        "image": "/images/font_classifier.jpeg",
-        "title": "Certificate Two",
-        "description": "This is a description for certificate two.",
-        "link": "https://example.com/certificate2"
-      },
-      {
-        "image": "/images/font_classifier.jpeg",
-        "title": "Certificate Three",
-        "description": "This is a description for certificate three.",
-        "link": "https://example.com/certificate3"
-      },
-      {
-        "image": "/images/font_classifier.jpeg",
-        "title": "Certificate Four",
-        "description": "This is a description for certificate four.",
-        "link": "https://example.com/certificate4"
+        "title": "Micro-Mouse",
+        "description": "Ranked 1st place in the Micro-Mouse line follower and maze competition.",
+        "link": "https://drive.google.com/file/d/1PRymRE126gfdghKKdtZnABlUZAQDJNH_/view?usp=sharing"
       }
     ]
   }

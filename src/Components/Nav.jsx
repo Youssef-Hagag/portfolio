@@ -1,5 +1,5 @@
-import React from "react"
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
+import ThemeToggle from "./ThemeToggle"
 
 const Nav = () => {
   const scrollToSection = (id) => {
@@ -7,44 +7,54 @@ const Nav = () => {
     section.scrollIntoView({ behavior: "smooth" })
   }
 
-  const [navVisible, setNavVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [navVisible, setNavVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [collapsed, setCollapsed] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
         // Scrolling down
-        setNavVisible(false);
+        setNavVisible(false)
       } else {
         // Scrolling up
-        setNavVisible(true);
+        setNavVisible(true)
       }
-      setLastScrollY(window.scrollY);
-    };
+      setLastScrollY(window.scrollY)
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollY]);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [lastScrollY])
 
   return (
-    <nav className={`${navVisible ? 'opacity-100' : 'opacity-0'} transition duration-500 hover:opacity-100 z-[100] fixed left-0 right-0 top-0 mx-auto flex h-[70px] w-[300px] text-xs sm:w-[500px] sm:text-base justify-around rounded-full border-b border-gray-900 bg-button-gradient p-4 px-4 py-2 text-white shadow-md`}>
-      <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Intro")}>
-        Intro
-      </button>
-      <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Projects")}>
-        Projects
-      </button>
-      <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Certificates")}>
-        Certificates
-      </button>
-      <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Skills")}>
-        Skills
-      </button>
-      <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Contact Me")}>
-        Contact Me
+    <nav className={`bg-button-gradient fixed left-0 right-0 z-[100] mx-auto mt-4 flex h-[70px] justify-around rounded-full border-b border-gray-900 px-4 py-2 text-xs font-bold shadow-md transition-transform duration-500 ${collapsed ? "w-[70px] translate-x-[40vw]" : "translate-x-0 sm:w-[500px]"} ${navVisible ? "translate-y-0" : "-translate-y-[150%]"}  sm:text-base`}>
+      {!collapsed && (
+        <>
+          <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Intro")}>
+            Intro
+          </button>
+          <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Projects")}>
+            Projects
+          </button>
+          <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Certificates")}>
+            Certificates
+          </button>
+          <button className="hover:opacity-50 focus:outline-none" onClick={() => scrollToSection("Skills")}>
+            Skills
+          </button>
+          <ThemeToggle />
+        </>
+      )}
+      <button className="hover:opacity-50 focus:outline-none" onClick={() => setCollapsed(!collapsed)}>
+        {!collapsed ? (
+          <i className="pi pi-arrow-down-left-and-arrow-up-right-to-center text-xl"></i>
+        ) : (
+          <i className="pi pi-bars text-xl"></i>
+        )}
       </button>
     </nav>
   )

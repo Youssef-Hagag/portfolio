@@ -28,27 +28,27 @@ export default function Certificates() {
   }
 
   return (
-    <div className="relative mx-auto h-[500px] w-[300px] sm:w-[500px]">
+    <div className="relative mx-auto h-[65vh] w-[30vw]">
       {/* Arrows */}
-      <button onClick={goToPrevious} className="absolute -left-[100px] -bottom-20 z-10 -translate-y-1/2 transform rounded-full bg-gray-800 p-2 text-2xl text-white hover:bg-gray-700">
+      <button onClick={goToPrevious} className="absolute -bottom-20 -left-[100px] z-10 -translate-y-1/2 transform rounded-full bg-gray-800 p-2 text-2xl text-white hover:bg-gray-700">
         <i className="pi pi-arrow-left"></i>
       </button>
-      <button onClick={goToNext} className="absolute -right-[100px] -bottom-20 z-10 -translate-y-1/2 transform rounded-full bg-gray-800 p-2 text-2xl text-white hover:bg-gray-700">
+      <button onClick={goToNext} className="absolute -bottom-20 -right-[100px] z-10 -translate-y-1/2 transform rounded-full bg-gray-800 p-2 text-2xl text-white hover:bg-gray-700">
         <i className="pi pi-arrow-right"></i>
       </button>
 
       {/* Carousel items */}
-      <div className="mt-30 flex h-full items-center justify-center">
+      <div className="flex h-full items-center justify-center">
         <div className="relative h-full w-full">
           {certificates.map((certificate, index) => {
             let positionClass = "opacity-0 -z-10"
 
             if (index === currentIndex) {
-              positionClass = "opacity-100 transform translate-x-0"
+              positionClass = "opacity-100 transform translate-x-0 max-md:w-[70vw] max-md:-translate-x-[28%]"
             } else if (index === prevIndex) {
-              positionClass = "opacity-40 transform -translate-x-full"
+              positionClass = "opacity-40 transform -translate-x-full max-md:hidden pointer-events-none"
             } else if (index === nextIndex) {
-              positionClass = "opacity-40 transform translate-x-full"
+              positionClass = "opacity-40 transform translate-x-full max-md:hidden pointer-events-none"
             }
 
             return (
@@ -61,7 +61,7 @@ export default function Certificates() {
       </div>
 
       {/* Currently Selected */}
-      <div className="absolute -bottom-10 left-[40%] flex justify-center space-x-2">
+      <div className="m-auto mt-8 flex items-center justify-center space-x-2">
         {certificates.map((_, index) => (
           <div key={index} className={`h-3 w-3 rounded-full ${index === currentIndex ? "bg-blue-500" : "bg-gray-400"} cursor-pointer`} onClick={() => setIndices(index)}></div>
         ))}
