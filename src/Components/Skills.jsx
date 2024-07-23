@@ -1,5 +1,4 @@
 import React from "react";
-import { AuroraBackground } from "./ui/aurora-background.tsx";
 import {
   SiReact,
   SiJavascript,
@@ -64,13 +63,13 @@ const skillsData = {
 const Skills = () => {
   return (
     <IconContext.Provider value={{ size: "1.5em" }}>
-      <div className="skills-section">
+      <div className="skills-section w-[90%] m-auto">
         {Object.entries(skillsData).map(([category, skills]) => (
-          <div key={category} className="skills-category mb-4">
-            <h3 className="mb-2 text-lg font-bold">{category}</h3>
-            <div className="skills-list grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+          <div key={category} className="skills-category p-5">
+            <h3 className="my-4 text-lg font-bold">{category}</h3>
+            <div className="flex justify-evenly flex-wrap gap-5">
               {skills.map((skill, index) => (
-                <div key={index} className="skill-item flex items-center">
+                <div key={index} className="skill-item flex justify-center w-48 h-10">
                   <skill.icon className="mr-2 text-xl" />
                   <span>{skill.name}</span>
                 </div>
