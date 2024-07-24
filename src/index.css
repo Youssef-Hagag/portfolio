@@ -19,23 +19,3 @@ p, h1, h2, h3, h4, h5, h6 {
 .section {
   padding: 10vh 3vw 0 3vw;
 }
-
-.bg-button-gradient {
-  background-image: linear-gradient(90deg, #8f92a4 3.4%, #59595e 100%);
-}
-
-.button-hover:hover {
-  background-image: none;
-  background-color: #59595e;
-  cursor:pointer;
-}
-
-.bg-button-gradient-dark {
-  background-image: linear-gradient(90deg, #161A31 3.4%, #06091F 100%);
-}
-
-.button-hover-dark:hover {
-  background-image: none;
-  background-color: #06091F;
-  cursor:pointer;
-}

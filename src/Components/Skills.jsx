@@ -63,13 +63,16 @@ const skillsData = {
 const Skills = () => {
   return (
     <IconContext.Provider value={{ size: "1.5em" }}>
-      <div className="skills-section w-[90%] m-auto">
+      <div className="skills-section m-auto w-[90%]">
         {Object.entries(skillsData).map(([category, skills]) => (
           <div key={category} className="skills-category p-5">
             <h3 className="my-4 text-lg font-bold">{category}</h3>
-            <div className="flex justify-evenly flex-wrap gap-5">
+            <div className="flex flex-wrap justify-evenly gap-5">
               {skills.map((skill, index) => (
-                <div key={index} className="skill-item flex justify-center w-48 h-10">
+                <div
+                  key={index}
+                  className="skill-item flex h-12 w-48 items-center justify-center rounded-full bg-white dark:bg-black border border-black dark:border-white transition-all duration-300 hover:scale-110 hover:cursor-default"
+                >
                   <skill.icon className="mr-2 text-xl" />
                   <span>{skill.name}</span>
                 </div>
