@@ -12,7 +12,7 @@ export default function GridCard({ image, title, description, link }) {
       <img
         src={`${process.env.PUBLIC_URL}${image}`}
         alt={title}
-        className="h-40 w-full object-fill"
+        className="h-40 w-full object-cover"
       />
       <div className="pt-2 p-4">
         <h3 className="sm:text-xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">{title}</h3>
