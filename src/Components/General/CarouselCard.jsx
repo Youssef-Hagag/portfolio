@@ -9,7 +9,7 @@ export default function CarouselCard({ image, title, description, link }) {
       className="block h-full w-full md:w-full transform overflow-hidden rounded-3xl bg-cardBackground shadow-lg transition-transform duration-300 hover:scale-105 dark:bg-cardBackgroundDark lg:text-xs"
     >
       <img
-        src={image}
+        src={`${process.env.PUBLIC_URL}${image}`}
         alt={title}
         className="h-48 w-full object-cover transition duration-300 group-hover:opacity-90"
       />

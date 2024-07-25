@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../General/Button.jsx";
-import { HeroHighlight, Highlight } from "../ui/Highlight.tsx";
+import { Highlight } from "../ui/Highlight.tsx";
 
 export default function Intro() {
   return (
