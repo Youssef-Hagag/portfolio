@@ -11,9 +11,9 @@ module.exports = {
       colors: {
         section1Dark: "#10153e",
         section2Dark: "#0d1134",
-        section3Dark: "#080b23",
-        section4Dark: "#06091e",
-        section5Dark: "#040715",
+        section3Dark: "#0b0f2f",
+        section4Dark: "#070b29",
+        section5Dark: "#030620",
         section1: "#ffffff",
         section2: "#f1f1f1",
         section3: "#dedede",

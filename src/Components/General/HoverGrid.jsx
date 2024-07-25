@@ -10,7 +10,7 @@ export default function HoverGrid({ items }) {
       {items.map((item, index) => (
         <div
           key={index}
-          className="relative block h-[300px] p-2 lg:w-[45%]"
+          className="relative block h-[300px] w-[90%] max-w-[500px] p-2 lg:w-[45%]"
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >

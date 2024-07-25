@@ -1,27 +1,26 @@
-import { useLayoutEffect, useState } from "react"
+import { useLayoutEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") === "true")
+  const initialDarkMode = localStorage.getItem("darkMode");
+  const [darkMode, setDarkMode] = useState(initialDarkMode === null ? true : initialDarkMode === "true");
 
   useLayoutEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add("dark")
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.remove("dark");
     }
-  }, [darkMode])
+  }, [darkMode]);
 
   const toggleDarkMode = () => {
-    if(darkMode)
-      localStorage.setItem("darkMode", false)
-    else 
-      localStorage.setItem("darkMode", true)
-    setDarkMode(!darkMode)
-  }
+    const newDarkMode = !darkMode;
+    localStorage.setItem("darkMode", newDarkMode);
+    setDarkMode(newDarkMode);
+  };
 
   return (
     <button onClick={toggleDarkMode} className="my-auto">
       <i className={`pi ${darkMode ? "pi-sun" : "pi-moon"} content-baseline sm:text-2xl hover:opacity-50`}></i>
     </button>
-  )
+  );
 }

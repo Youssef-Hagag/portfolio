@@ -8,10 +8,10 @@ export default function GridCard({ image, title, description, link }) {
       rel="noopener noreferrer"
       className="relative z-10 block w-full h-full transform overflow-hidden rounded-3xl bg-cardBackground shadow-lg dark:bg-cardBackgroundDark"
     >
-      <img src={image} alt={title} className="h-36 w-full object-cover" />
-      <div className="p-4">
-        <h3 className="mb-2 sm:text-xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">{title}</h3>
-        <p className="text-left sm:text-xl text-gray-400 overflow-hidden text-ellipsis">
+      <img src={image} alt={title} className="h-40 w-full object-fill" />
+      <div className="pt-2 p-4">
+        <h3 className="sm:text-xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">{title}</h3>
+        <p className="text-left text-sm sm:text-lg text-gray-400 overflow-hidden text-ellipsis">
           {description}
         </p>
       </div>

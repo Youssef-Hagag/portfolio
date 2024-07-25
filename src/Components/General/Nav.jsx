@@ -5,7 +5,9 @@ const Nav = () => {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     section.scrollIntoView({ behavior: "smooth" });
-    setNavVisible(false);
+    setTimeout(() => {
+      setNavVisible(false);
+    }, 700);
   };
 
   const [navVisible, setNavVisible] = useState(true);
@@ -33,7 +35,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`fixed left-0 right-0 z-[100] mx-[5vw] mt-4 flex h-[50px] justify-around rounded-full border-b border-gray-900 bg-button-gradient px-4 py-2 text-xs font-bold shadow-md transition-transform duration-500 dark:bg-button-gradient-dark sm:mx-auto sm:h-[70px] ${collapsed ? "w-[50px] translate-x-[40vw] sm:w-[70px]" : "w-[90vw] translate-x-0 sm:w-[500px]"} ${navVisible ? "translate-y-0" : "-translate-y-[150%]"} sm:text-base`}
+      className={`fixed left-0 right-0 z-[100] mx-[5vw] mt-4 flex h-[50px] justify-around rounded-full border-b border-gray-900 bg-button-gradient px-4 py-2 text-xs font-bold shadow-md transition-transform duration-500 dark:bg-button-gradient-dark mx-auto sm:h-[70px] ${collapsed ? "w-[50px] translate-x-[40vw] sm:w-[70px]" : "w-[90vw] translate-x-0 sm:w-[500px]"} ${navVisible ? "translate-y-0" : "-translate-y-[150%]"} sm:text-base`}
     >
       {!collapsed && (
         <>
