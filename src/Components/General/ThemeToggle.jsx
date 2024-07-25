@@ -21,7 +21,7 @@ export default function ThemeToggle() {
 
   return (
     <button onClick={toggleDarkMode} className="my-auto">
-      <i className={`pi ${darkMode ? "pi-sun" : "pi-moon"} content-baseline text-2xl hover:opacity-50`}></i>
+      <i className={`pi ${darkMode ? "pi-sun" : "pi-moon"} content-baseline sm:text-2xl hover:opacity-50`}></i>
     </button>
   )
 }

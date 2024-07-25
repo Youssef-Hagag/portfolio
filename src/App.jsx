@@ -1,7 +1,7 @@
-import Nav from "./Components/Nav"
+import Nav from "./Components/General/Nav"
 import "primeicons/primeicons.css"
 import Spotlight from "./Components/ui/Spotlight.tsx"
-import Sections from "./Components/Sections.jsx"
+import Sections from "./Components/Sections/Sections.jsx"
 
 export default function App() {
   return (

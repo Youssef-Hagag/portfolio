@@ -1,3 +1,8 @@
+const svgToDataUri = require("mini-svg-data-uri");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -22,6 +27,7 @@ module.exports = {
       backgroundImage: {
         'button-gradient': 'linear-gradient(90deg, #ffffff 3.4%, #b7b7c2 100%)',
         'button-gradient-dark': 'linear-gradient(90deg, #c4c4c4 3.4%, #06091F 100%)',
+        aurora: "aurora 60s linear infinite",
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
@@ -35,6 +41,14 @@ module.exports = {
           "100%": {
             opacity: 1,
             transform: "translate(-50%,-40%) scale(1)",
+          },
+          aurora: {
+            from: {
+              backgroundPosition: "50% 50%, 50% 50%",
+            },
+            to: {
+              backgroundPosition: "350% 50%, 350% 50%",
+            },
           },
         },
       },
@@ -61,5 +75,29 @@ module.exports = {
         },
       });
     },
+    addVariablesForColors,
+    function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "bg-dot-thick": (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    },
   ],
 };
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
