@@ -15,7 +15,7 @@ export default function HoverGrid({ items }) {
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
-            {hoveredIndex == index && (
+            {hoveredIndex === index && (
               <motion.span
                 className="absolute inset-0 block h-full w-full rounded-3xl bg-neutral-400 dark:bg-slate-600"
                 layoutId="hoverBackground"

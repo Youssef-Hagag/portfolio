@@ -13,6 +13,8 @@ export const Highlight = ({
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    const element = ref.current; // Store ref.current in a variable
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -37,13 +39,13 @@ export const Highlight = ({
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (element) {
+      observer.observe(element);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, [controls]);
