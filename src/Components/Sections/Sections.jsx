@@ -16,9 +16,9 @@ export default function Sections() {
       </div>
       <div
         id="Projects"
-        className="section min-h-screen bg-section2 transition-all duration-300 dark:bg-section2Dark"
+        className="section h-[650px] min-h-screen bg-section2 transition-all duration-300 dark:bg-section2Dark"
       >
-        <h2 className="m-4 mb-8 sm:text-3xl font-bold">
+        <h2 className="m-4 mb-8 font-bold sm:text-3xl">
           <Highlight>Projects</Highlight>
         </h2>
         <Projects />
@@ -27,7 +27,7 @@ export default function Sections() {
         id="Certificates"
         className="section min-h-screen bg-section3 transition-all duration-300 dark:bg-section3Dark"
       >
-        <h2 className="m-4 mb-8 sm:text-3xl font-bold">
+        <h2 className="m-4 mb-8 font-bold sm:text-3xl">
           <Highlight>Certificates</Highlight>
         </h2>
         <Certificates />
@@ -36,7 +36,7 @@ export default function Sections() {
         id="Skills"
         className="section min-h-screen bg-section4 transition-all duration-300 dark:bg-section4Dark"
       >
-        <h2 className="m-4 mb-8 sm:text-3xl font-bold">
+        <h2 className="m-4 mb-8 font-bold sm:text-3xl">
           <Highlight>Skills</Highlight>
         </h2>
         <Skills />

@@ -8,6 +8,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        "max-sm": { max: "639px" },
+        "max-md": { max: "767px" },
+        "max-lg": { max: "1023px" },
+        "max-xl": { max: "1279px" },
+        "max-2xl": { max: "1535px" },
+        "h-landscape": { raw: "(max-height: 520px)" },
+        "touch-device-hover": { raw: "(hover: hover)" },
+      },
       colors: {
         section1Dark: "#10153e",
         section2Dark: "#0d1134",
@@ -23,8 +32,9 @@ module.exports = {
         cardBackground: "#ffffff",
       },
       backgroundImage: {
-        'button-gradient': 'linear-gradient(90deg, #ffffff 3.4%, #b7b7c2 100%)',
-        'button-gradient-dark': 'linear-gradient(90deg, #c4c4c4 3.4%, #06091F 100%)',
+        "button-gradient": "linear-gradient(90deg, #ffffff 3.4%, #b7b7c2 100%)",
+        "button-gradient-dark":
+          "linear-gradient(90deg, #c4c4c4 3.4%, #06091F 100%)",
         aurora: "aurora 60s linear infinite",
       },
       animation: {
@@ -55,21 +65,21 @@ module.exports = {
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
-        '.bg-button-gradient': {
-          backgroundImage: 'linear-gradient(90deg, #ffffff 3.4%, #b7b7c2 100%)',
+        ".bg-button-gradient": {
+          backgroundImage: "linear-gradient(90deg, #ffffff 3.4%, #b7b7c2 100%)",
         },
-        '.button-hover:hover': {
-          backgroundImage: 'none',
-          backgroundColor: '#b7b7c2',
-          cursor: 'pointer',
+        ".button-hover:hover": {
+          backgroundImage: "none",
+          backgroundColor: "#b7b7c2",
+          cursor: "pointer",
         },
-        '.bg-button-gradient-dark': {
-          backgroundImage: 'linear-gradient(90deg, #8f92a4 3.4%, #59595e 100%)',
+        ".bg-button-gradient-dark": {
+          backgroundImage: "linear-gradient(90deg, #8f92a4 3.4%, #59595e 100%)",
         },
-        '.button-hover-dark:hover': {
-          backgroundImage: 'none',
-          backgroundColor: '#59595e',
-          cursor: 'pointer',
+        ".button-hover-dark:hover": {
+          backgroundImage: "none",
+          backgroundColor: "#59595e",
+          cursor: "pointer",
         },
       });
     },
@@ -79,11 +89,14 @@ module.exports = {
         {
           "bg-dot-thick": (value) => ({
             backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`,
             )}")`,
           }),
         },
-        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+        {
+          values: flattenColorPalette(theme("backgroundColor")),
+          type: "color",
+        },
       );
     },
   ],
@@ -92,9 +105,9 @@ module.exports = {
 function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
- 
+
   addBase({
     ":root": newVars,
   });
