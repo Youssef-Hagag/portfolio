@@ -6,30 +6,41 @@
   text-align: center;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+/* Light mode text selection color */
+::selection {
+  background: #b7b7c2;
 }
 
-/* width */
+/* Dark mode text selection color */
+html.dark ::selection {
+  background: #59595e;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
+  border-radius: 10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  
+  background: #ffffff;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #dedede;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c4c4c4;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+html.dark ::-webkit-scrollbar-track {
+  background: #10153e;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #030620;
+  border-radius: 20px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #0b0f2f;
 }
 
 .section {

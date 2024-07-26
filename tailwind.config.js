@@ -21,8 +21,6 @@ module.exports = {
         section5: "#c4c4c4",
         cardBackgroundDark: "#212641",
         cardBackground: "#ffffff",
-        buttonHover: "#59595e",
-        buttonHoverDark: "#06091F",
       },
       backgroundImage: {
         'button-gradient': 'linear-gradient(90deg, #ffffff 3.4%, #b7b7c2 100%)',
@@ -62,7 +60,7 @@ module.exports = {
         },
         '.button-hover:hover': {
           backgroundImage: 'none',
-          backgroundColor: '#59595e',
+          backgroundColor: '#b7b7c2',
           cursor: 'pointer',
         },
         '.bg-button-gradient-dark': {
@@ -70,7 +68,7 @@ module.exports = {
         },
         '.button-hover-dark:hover': {
           backgroundImage: 'none',
-          backgroundColor: '#06091F',
+          backgroundColor: '#59595e',
           cursor: 'pointer',
         },
       });

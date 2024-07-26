@@ -8,13 +8,11 @@ export default function Intro() {
       <h2 className="mb-4 mt-28 rounded-full sm:text-3xl font-bold ">
         <Highlight className="p-4"> Hi, I'm Youssef Mohamed Hagag</Highlight>{" "}
       </h2>
-      <br />
-      <p className="text-left sm:text-2xl">
+      <p className="text-left sm:text-2xl mt-8">
         I'm a 4th-year Computer Engineering student at Faculty of Engineering,
         Cairo University.
       </p>
-      <br />
-      <p className="text-left sm:text-2xl md:pr-[30vh]">
+      <p className="text-left sm:text-2xl md:pr-[30vh] mt-8">
         I have a keen interest in software development. My current goal is to
         improve my skills and knowledge to create impactful applications and
         contribute to the world of programming.
@@ -26,11 +24,11 @@ export default function Intro() {
           <Button text="Download CV" icon="download"></Button>
         </a>
 
-        <a href="https://www.linkedin.com/in/youssef-hagag-58574a30a/">
+        <a target="_blank" href="https://www.linkedin.com/in/youssef-hagag-58574a30a/">
           <Button text="LinkedIn" icon="arrow-up-right"></Button>
         </a>
 
-        <a href="https://github.com/Youssef-Hagag">
+        <a target="_blank" href="https://github.com/Youssef-Hagag">
           <Button text="GitHub" icon="arrow-up-right"></Button>
         </a>
       </div>

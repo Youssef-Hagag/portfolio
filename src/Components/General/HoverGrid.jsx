@@ -17,7 +17,7 @@ export default function HoverGrid({ items }) {
           <AnimatePresence>
             {hoveredIndex === index && (
               <motion.span
-                className="absolute inset-0 block h-full w-full rounded-3xl bg-neutral-400 dark:bg-slate-600"
+                className="absolute inset-0 block h-full w-full rounded-3xl bg-gray-400 dark:bg-slate-600"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
