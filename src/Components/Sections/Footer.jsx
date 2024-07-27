@@ -12,8 +12,8 @@ export default function Footer() {
         <a target="_blank" rel="noreferrer" href="https://github.com/Youssef-Hagag">
           <i className="pi pi-github sm:text-2xl"></i>
         </a>
-        <a target="_blank" rel="noreferrer" href="https://www.facebook.com/yousif.mohamedhagag">
-          <i className="pi pi-facebook sm:text-2xl"></i>
+        <a href="mailto:yousef.m.haggag@gmail.com">
+          <i className="pi pi-envelope sm:text-2xl"></i>
         </a>
       </div>
     </footer>
