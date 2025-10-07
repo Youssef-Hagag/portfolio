@@ -8,6 +8,7 @@ import {
   SiJest,
   SiPython,
   SiExpress,
+  SiLaravel,
   SiNodedotjs,
   SiMongodb,
   SiMysql,
@@ -15,6 +16,8 @@ import {
   SiVim,
   SiGithub,
   SiCheckmarx,
+  SiDocker,
+  SiLinux,
 } from "react-icons/si";
 import { DiMaterializecss } from "react-icons/di";
 import { RiTeamLine } from "react-icons/ri";
@@ -33,12 +36,15 @@ const iconMapping = {
   SiJest: SiJest,
   SiPython: SiPython,
   SiExpress: SiExpress,
+  SiLaravel: SiLaravel,
   SiNodedotjs: SiNodedotjs,
   SiMongodb: SiMongodb,
   SiMysql: SiMysql,
   SiArduino: SiArduino,
   SiVim: SiVim,
   SiGithub: SiGithub,
+  SiDocker: SiDocker,
+  SiLinux: SiLinux,
   SiCheckmarx: SiCheckmarx,
   DiMaterializecss: DiMaterializecss,
   RiTeamLine: RiTeamLine,

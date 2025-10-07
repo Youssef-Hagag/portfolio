@@ -19,7 +19,7 @@ export default function Sections() {
         className="section h-[650px] min-h-screen bg-section2 transition-all duration-300 dark:bg-section2Dark"
       >
         <h2 className="m-4 mb-8 font-bold sm:text-3xl">
-          <Highlight>Projects</Highlight>
+          <Highlight>Experience & Projects</Highlight>
         </h2>
         <Projects />
       </div>

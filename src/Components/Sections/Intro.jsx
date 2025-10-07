@@ -9,8 +9,8 @@ export default function Intro() {
         <Highlight className="p-4"> Hi, I'm Youssef Mohamed Hagag</Highlight>{" "}
       </h2>
       <p className="mt-12 md:pr-[40px] text-left sm:text-2xl">
-        I'm a 4th-year Computer Engineering student at Faculty of Engineering,
-        Cairo University.
+        I'm an Egyptian Computer Engineering Graduate. I graduated from Faculty of Engineering,
+        Cairo University in july 2025.
       </p>
       <p className="mt-8 md:pr-[40px] text-left sm:text-2xl">
         I have a keen interest in software development. My current goal is to
@@ -18,7 +18,7 @@ export default function Intro() {
         contribute to the world of programming.
       </p>
 
-      <h2 className="mb-4 mt-10 font-bold sm:text-3xl">Checkout my work</h2>
+      <h2 className="mb-4 mt-10 font-bold sm:text-3xl">Check out my work</h2>
       <div className="max-md:gap-10 flex flex-wrap justify-center gap-20 p-5">
         <a href="https://drive.google.com/uc?export=download&id=1H1YRFKRateyieXGcnWHC1lRgVvQ7BfsL">
           <Button text="Download CV" icon="download"></Button>

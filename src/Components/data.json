@@ -1,6 +1,18 @@
 {
     "projects": [
       {
+        "image": "/images/daftra.png",
+        "title": "Software Developer Intern @Daftra",
+        "description": "Worked on customizing Daftra’s web application based on client requests, using JavaScript, HTML, and CSS. Built a standalone statstics dashboard project using React, Tailwind and Supabase for users with multiple accounts.",
+        "link": "https://www.linkedin.com/company/daftra/"
+      },
+      {
+        "image": "/images/pearl.png",
+        "title": "PEARL | Sponsored by Ericsson",
+        "description": "Implemented an explainability-driven framework to evaluate reinforcement learning agents using techniques like LIME, SHAP. Supports both image-based and structured environments. Used PyTorch, OpenAI Gym, and Baselines3.",
+        "link": "https://docs.google.com/presentation/d/1cTq3rbzNXoomz3_zhHJBwN1G1XeLLTfU/edit?usp=sharing&ouid=106971564239613575038&rtpof=true&sd=true"
+      },
+      {
         "image": "/images/twitter_clone.jpg",
         "title": "Twitter Clone",
         "description": "Worked with a team of 5 people to develop the front-end of a Twitter clone application using ReactJS, Tailwind and Material-UI and then integrated with the backend team.",
@@ -60,7 +72,7 @@
       ],
       "Back-End Development": [
         { "name": "Python Django", "icon": "SiPython" },
-        { "name": "Express", "icon": "SiExpress" },
+        { "name": "PHP Laravel", "icon": "SiLaravel" },
         { "name": "Node.JS", "icon": "SiNodedotjs" },
         { "name": "MongoDB", "icon": "SiMongodb" },
         { "name": "MySQL", "icon": "SiMysql" }
@@ -72,6 +84,8 @@
       ],
       "Miscellaneous": [
         { "name": "Git", "icon": "SiGithub" },
+        { "name": "Docker", "icon": "SiDocker" },
+        { "name": "Linux", "icon": "SiLinux" },
         { "name": "Machine learning", "icon": "FaRobot" },
         { "name": "Image Processing", "icon": "FaImage" }
       ],
